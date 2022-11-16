@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/produtos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuarios</title>
+    <title>Produtos</title>
 </head>
 <body>
     <div class="container">
@@ -24,15 +24,13 @@
        <div class="tabela">
        <table>
          <tr>
-           <th>Nome Completo</th>        
-           <th>Usuário</th>     
-           <th>Senha</th>  
+           <th>Titulo</th>        
+           <th>Preço</th>     
          </tr>
-         <% resultado.forEach (function(usuario){ %>
+         <% resultado.forEach (function(produto){ %>
          <tr>
-            <td><%= usuario.nome %></td>        
-            <td><%= usuario.usuario %></th>     
-            <td><%= usuario.senha %></td>  
+            <td><%= produto.titulo %></td>        
+            <td><%= produto.preco %></th>      
           </tr>
         <% }); %>
      </table>

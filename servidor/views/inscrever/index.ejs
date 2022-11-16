@@ -21,12 +21,15 @@
        <div class='card'>
         <h1>Cadastro</h1>
        <form action="/cadastro" method="post">
-        <span class="nome" for="senha">Nome Completo</span>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo">
-           <span class="nome" for="usuario">Usuario</span>
-           <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuario">
-            <span class="nome" for="senha">Senha</span>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+        <span class="titulo" for="titulo">Titulo do produto</span>
+            <input type="text" name="titulo" id="titulo" placeholder="Digite o titulo do produto">
+           <span class="descricao" for="descricao">Descrição do produto</span>
+           <textarea style = "margin:10px;" id="descricao" name="descricao" rows="4" cols="50" placeholder="Digite a descrição do produto"></textarea>
+           <!-- <input type="text" name="descricao" id="descricao" placeholder="Digite a descrição do produto"> -->
+            <span class="preco" for="preco">Preço do produto</span>
+            <input type="number" name="preco" id="preco">
+            <span class="imagem" for="imagem">Imagens do produto</span>
+            <input type="text" name="imagem" id="imagem">
          
         <button type="submit">Cadastrar</button>
        </form>
