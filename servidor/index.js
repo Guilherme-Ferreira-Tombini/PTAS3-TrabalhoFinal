@@ -33,15 +33,27 @@ app.get('/inscrever', async function(req, res){
 
 app.post('/cadastro', async function(req, res){
  const produtos = produto.create(req.body);
- console.log();
  res.render("home");
 });
 
-// listar produtos
+// listar produtos JSON
 app.get('/produtos', async function(req, res){
   var resultado = await produto.findAll();
-  res.render("produtos", {resultado});
+  //res.render("produtos", {resultado});
+  res.json(resultado);
 })
+
+// listar produtos pelo ID em JSON
+app.get("/produtos/:id", async function(req, res) {
+  const id = await produto.findByPk(req.params.id);
+  res.json(id);
+ });
+
+// Deletar produtos pelo ID
+ app.delete("/produtos/:id", async function(req, res) {
+  var resultado = produto.destroy({ where: { id: req.params.id }});
+   res.json(resultado);
+ });
 
 app.listen(4000, function() {
   console.log('App de Exemplo escutando na porta 4000!')

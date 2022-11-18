@@ -20,18 +20,15 @@
        <main>
        <div class='card'>
        <h1>Usuários cadastrados</h1>
-       
-       <div class="produtos">
-        <div class="card">
+
           <% resultado.forEach (function(produto){ %>
-             <p><%= produto.titulo %></p>
-             <p><%= produto.preco %></p>     
+            <div class="card2">
+              <img src='<%= produto.titulo %>' style="height: 100px;width: 100px;">
+              <p><%= produto.titulo %></p>
+              <p><%= produto.descricao %></p> 
+              <p><%= produto.preco %></p>     
+            </div>
          <% }); %>
-     </div>
-
-       </div>
-
-       </div>
     
        </main>
     

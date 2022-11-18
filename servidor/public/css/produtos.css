@@ -78,6 +78,19 @@ span{
     border: 1px solid rgb(255, 255, 255);
 }
 
+.card2{
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(4, 4, 126);
+  color:white;
+  border-radius: 10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
 footer{
     color:white;
     background-color: rgb(4, 4, 126);
